@@ -1,0 +1,73 @@
+/* Styling the whole page*/
+body {
+    font-family: Arial,sans-serif;
+    text-align: center;
+    margin-top: 25px;
+    background-color: aqua;
+
+}
+
+#animatedCircle {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    border: 5px solid pink;
+    text-align: center;
+    margin: 200px auto;
+    display: flex;              
+    justify-content: center;  
+    align-items: center;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #b5651d);       
+
+    font-size: 16px;
+     box-shadow: inset -8px -8px 15px rgba(255,255,255,0.4),
+                inset 8px 8px 15px rgba(0,0,0,0.3),
+                0 10px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+@keyframes bounce {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-200px);}
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(1080deg); }
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    25% {transform: translateX(-20px);}
+    75% {transform: translateX(20px);}
+}
+
+.bounce {
+    animation: bounce 0.9s ease;
+}
+
+.spin {
+    animation: spin 3s ease;
+}
+
+.shake {
+    animation: shake 0.9s ease;
+}
+
+#animateBtn {
+      color: blue;
+    background-color: pink;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer; /* 👈 Makes mouse a pointer on hover */
+    transition: all 0.3s ease
+
+}
+
+#animateBtn:hover {
+     background-color: blue;
+    color: white;
+    transform: scale(1.05);
+}
